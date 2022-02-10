@@ -20,7 +20,6 @@ from sssd.testlib.common.libkrb5 import krb5srv
 from constants import ds_instance_name
 
 
-@pytest.mark.usefixtures('setup_sssd_gssapi', 'create_posix_usersgroups')
 @pytest.mark.fips
 class Testkrbfips(object):
     """ Testing fips """
@@ -33,6 +32,7 @@ class Testkrbfips(object):
         :id: b1321b02-4a29-4285-8c85-36f925496463
         :bugzilla: https://bugzilla.redhat.com/show_bug.cgi?id=1792331
         """
+        time.sleep(100000)
         tools = sssdTools(multihost.client[0])
         domain_name = tools.get_domain_section_name()
         multihost.client[0].service_sssd('stop')
