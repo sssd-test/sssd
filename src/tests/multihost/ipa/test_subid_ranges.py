@@ -40,7 +40,6 @@ def ipa_subid_find(multihost):
 @pytest.mark.usefixtures('environment_setup',
                          'subid_generate',
                          'bkp_cnfig_for_subid_files')
-@pytest.mark.tier1
 class TestSubid(object):
     """
     This is for ipa bugs automation
