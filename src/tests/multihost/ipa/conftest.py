@@ -17,7 +17,7 @@ from sssd.testlib.common.paths import SSSD_DEFAULT_CONF
 def pytest_configure():
     """ Namespace hook to add below dict in the pytest namespace """
     pytest.num_masters = 1
-    pytest.num_ad = 1
+    pytest.num_ad = 0
     pytest.num_atomic = 0
     pytest.num_replicas = 0
     pytest.num_clients = 1
